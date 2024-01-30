@@ -1,0 +1,271 @@
+
+/* Global Styles */
+body {
+   margin: 0;
+background: #2a2438; 
+   color: rgba(255, 255, 255, 0.779);
+}
+body a {
+   color: #fff;
+}
+
+/* Navigation Bar */
+nav {
+   background: #dbd8e3;    
+   font-family: 'DM Serif Display', serif;    /* Font */  
+   padding: 10px;         /* Spacing inside nav */
+   display: flex;        /* Uses Flexbox */ 
+   justify-content: right;    /* set item to right */
+}
+
+nav a {              /* The hyperlink when not visted*/
+   color: white;          /* Light color for links */
+   padding: 8px 16px;     /* Spacing around links */
+   display: inline-block; /* Align links in a line */
+   text-decoration: none; /* Remove underline */
+}
+
+nav a:hover {        /* The hyperlink when hovered */
+   background-color: #ddd; /* Dark background */
+   color: black;          /* Light text */
+}
+/* footer */
+footer{
+background: #dbd8e3;    padding: 10px;         /* Spacing inside nav */
+   display: flex;        /* Uses Flexbox */ 
+   font-family: 'DM Serif Display', serif;    
+   justify-content: center;    /* set item to center */
+}
+footer a {              /* The hyperlink when not visted*/
+   color: white;          /* Light color for links */
+   padding: 8px 16px;     /* Spacing around links */
+   display: inline-block; /* Align links in a line */
+}
+footer a:hover {        /* The hyperlink when hovered */
+   background-color: #ddd; /* Dark background */
+   color: black;          /* Light text */
+}
+/* Body Styles */
+body {
+   margin: 0;
+   font-family: 'dm sans', sans-serif;
+   font-size: 20px;
+   color: #fff;
+   background: #2a2438; 
+}
+.intro-section {
+   display: flex;
+   align-items: center; /* This centers the content vertically */
+   justify-content: center; /* This centers the content horizontally */
+   text-align: center; /* This centers the text inside the content div */
+   font-family: 'DM Serif Display', serif;
+   font-size: 30px;
+   padding: 20px;
+   background: #5c5470;
+   position: relative;
+   overflow: hidden;
+}
+.intro-section img {
+   width: 30vw; /* 30% of the viewport width */
+   height: auto; /* Maintain aspect ratio */   
+   max-height: 90%; /* Ensure image does not exceed its container */
+   max-width: 90%; /* Ensure image does not exceed its container */
+   border: 3px solid #ffffff; /* White border */
+   border-radius: 15px; /
+}
+/* Flex child: left image */
+.intro-section img:first-of-type {
+   position: absolute;
+   left: 20px; /* Position from the left edge */
+   top: 50%;
+   transform: translateY(-50%); /* Center vertically */
+  
+}
+
+/* Flex child: right image */
+.intro-section img:last-of-type {
+   position: absolute;
+   right: 20px; /* Position from the right edge */
+   top: 50%;
+   transform: translateY(-50%); /* Center vertically */
+   
+}
+
+/* Flex child: centered content */
+.intro-section .content {
+   z-index: 1; /* Ensures content is above the images */
+   padding: 0 40px; /* Gives some space on the sides */
+   flex-grow: 1; /* Allows the content div to grow and fill the space for better centering */
+   text-align: center; /* Ensures the text is centered within the content div */
+}
+
+
+
+
+
+.main-content-section {
+   display: flex; /* Use flexbox to center children */
+   flex-direction: column; /* Stack children vertically */
+   align-items: center; /* Center children horizontally */
+   justify-content: center; /* Center children vertically if there is extra space */
+   text-align: center; /* Center text inside the children */
+   background: #332e3e; 
+   padding: 20px; /* Padding around the content */
+   font-family: 'DM Serif Display', serif;
+   position: relative;
+   overflow: hidden;
+}
+.main-content-section p {
+   font-family: 'Sans serif', serif;
+}
+
+
+
+
+
+
+.three-col {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+   gap: 20px; /* Space between cards */
+   padding: 20px; /* Padding around the entire grid */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 15px; /* rounded corners */
+   overflow: hidden;
+}
+
+.card {
+   background-color: #5c5470; /* White background */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+   border-radius: 10px; /* Rounded corners */
+   overflow: hidden; /* Ensures content fits within the corners */
+   display: flex; /* Flex layout for vertical stacking */
+   flex-direction: column; /* Stack image and content vertically */
+   align-items: center; /* Center items horizontally */
+
+}
+
+.card-image {
+   width: 100%; /* Image takes full width of the card */
+   height: auto; /* Maintain aspect ratio */
+   margin-bottom: 20px; /* Space between image and text content */
+}
+
+.card-content {
+   padding: 20px; /* Padding inside the content area */
+   text-align: center; /* Center the text */
+   width: 100%; /* Match width to card */
+}
+/* Style for unordered and ordered lists */
+.main-content-section ul,
+.main-content-section ol {
+    display: flex;
+    flex-direction: column; /* Stack list items vertically */
+    gap: 10px; /* Space between list items */
+    padding-left: 20px; /* Adjust padding for list indentation */
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margins */
+}
+
+/* Style for individual list items */
+.main-content-section li {
+    background-color: #0e0d0d; /* Light background for each list item */
+    padding: 5px 10px; /* Padding inside each list item */
+    border-radius: 5px; /* Rounded corners for list items */
+    border: 1px solid #ddd; /* Border for list items */
+}
+
+/* Style for description lists */
+.main-content-section dl {
+    display: grid;
+    grid-template-columns: max-content auto; /* Allocate space for dt and dd */
+    gap: 10px 20px; /* Space between dt and dd and each term-description pair */
+    margin: 0; /* Remove default margins */
+}
+
+.main-content-section dt {
+    font-weight: bold; /* Bold font for the term */
+}
+
+.main-content-section dd {
+    margin-left: 0; /* Align with the grid */
+}
+
+.one-col {
+   display: flex;
+   justify-content: center; /* Center the card horizontally */
+   padding: 20px;
+   width: 100%;
+}
+.one-col .card {
+   width: 90%; /* Increase the width as needed, or use a specific pixel value */
+   max-width: 600px; /* Set a maximum width if necessary */
+   margin: 20px auto; /* Keep the card centered */
+   padding: 20px; /* Add padding inside the card */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+   border-radius: 10px; 
+}
+
+/* Style for form inputs */
+input[type="text"],
+input[type="email"] {
+   width: 90%; /* Full width of the card */
+   padding: 10px;
+   margin-bottom: 10px; /* Space between input elements */
+   border: 1px solid #ddd;
+   border-radius: 5px; /* Consistent with card's rounded corners */
+}
+textarea {
+   width: 130%; /* Full width of the card */
+   padding: 10px;
+   margin-bottom: 10px; /* Space between input elements */
+   border: 1px solid #ddd;
+   border-radius: 5px; /* Consistent with card's rounded corners */
+}
+
+
+/* Style for form submit button */
+input[type="submit"] {
+   padding: 10px 20px;
+   background-color: #007bff; /* Example button color */
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+   background-color: #0056b3; /* Darker button color on hover */
+}
+
+/* Ensure the form inherits the body's font-family or set it explicitly */
+form {
+   font-family: 'DM Serif Display', serif; /* Match the theme of the site */
+}
+
+section a {
+   color: #95c1df;
+   text-decoration: none;
+}
+section a:link { 
+   text-decoration: none; 
+ } 
+ section a:visited { 
+   text-decoration: none; 
+ } 
+ section a:hover { 
+   text-decoration: none; 
+   background-color:#6b5f8a;;
+   color: #180f2d;
+
+ } 
+ section a:active { 
+   text-decoration: none; 
+ }
+ hr {
+   border: 2px solid rgb(255, 255, 255);
+   
+   border-radius: 5px;
+   height: 10px;
+   width: 100%;
+}
